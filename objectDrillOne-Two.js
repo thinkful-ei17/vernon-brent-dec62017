@@ -1,9 +1,10 @@
+'use strict';
 function updateObject(obj) {
   // your code here
-  obj.foo = "foo";
-  obj.bar = "bar";
-  obj.bizz = "bizz";
-  obj.bang = "bang";
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang';
 
   return obj;
 }
@@ -26,7 +27,7 @@ function updateObject(obj) {
   var newObj = updateObject(oldObj);
   if (typeof newObj !== 'object') {
     console.error('ERROR: `createMyObject` must return an object');
-    return false
+    return false;
   }
   ['foo', 'bar', 'bizz', 'bang'].forEach(function(key) {
     if (!(key in newObj)) {

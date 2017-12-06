@@ -1,12 +1,14 @@
+'use strict';
+
 function createMyObject() {
   return {
-    "foo": "bar",
-    "answerToUniverse": 42,
-    "olly olly": "oxen free",
-    "sayHello": function () {
-      return "hello";
+    'foo': 'bar',
+    'answerToUniverse': 42,
+    'olly olly': 'oxen free',
+    'sayHello': function () {
+      return 'hello';
     }
-  }
+  };
 }
 
 /* From here down, you are not expected to
@@ -31,7 +33,7 @@ function createMyObject() {
     }
   });
   if (obj.foo !== 'bar') {
-    console.error("ERROR: Value for `foo` should be 'bar' but was " + obj.foo);
+    console.error('ERROR: Value for `foo` should be \'bar\' but was ' + obj.foo);
     return false;
   }
   if (obj.answerToUniverse !== 42) {
@@ -43,14 +45,14 @@ function createMyObject() {
   }
   if (obj['olly olly'] !== 'oxen free') {
     console.error(
-      "ERROR: Value for `'olly olly'` should be 'oxen free' but was " +
+      'ERROR: Value for `\'olly olly\'` should be \'oxen free\' but was ' +
         obj['olly olly']
     );
     return false;
   }
   if (!(typeof obj.sayHello === 'function' && obj.sayHello() === 'hello')) {
     console.error(
-      "ERROR: Value for `sayHello` must be a function that returns the string 'hello'"
+      'ERROR: Value for `sayHello` must be a function that returns the string \'hello\''
     );
     return false;
   }

@@ -1,4 +1,4 @@
-
+'use strict';
 
 const studentData = [
   {
@@ -24,7 +24,7 @@ function enrollInSummerSchool(students) {
   //how2update
 
   for (let x in students) {
-    students[x].status = "In Summer school";
+    students[x].status = 'In Summer school';
   }
 
   return students;

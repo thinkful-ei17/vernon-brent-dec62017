@@ -1,3 +1,5 @@
+'use strict';
+
 // Take up to 10 minutes to write a function called makeStudentReport that takes a single argument,
 // data. data is an array of objects. Each object in the array represents a student a
 // nd their letter grade for a course — for example, {name: 'Johnny Robot', grade: 'C'}.
@@ -11,7 +13,7 @@ function makeStudentsReport(data) {
   let arr = [];
   // int i = 0; i < arr.length; i++
   for (let x in data) {
-    arr.push(`${data[x]["name"]}: ${data[x]["grade"]}`);
+    arr.push(`${data[x]['name']}: ${data[x]['grade']}`);
   }
 
 
