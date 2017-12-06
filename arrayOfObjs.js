@@ -11,15 +11,15 @@ function gimmeObj (name, jobTitle) {
   return {
     name: `${name}`,
     title: `${jobTitle}`
-  }
+  };
 }
 
-const obj1 = gimmeObj("Vernon", "Wizard");
-const obj2 = gimmeObj("Alder", "King");
-const obj3 = gimmeObj("Trump", "President");
+const obj1 = gimmeObj('Vernon', 'Wizard');
+const obj2 = gimmeObj('Alder', 'King');
+const obj3 = gimmeObj('Trump', 'President');
 
 const arr = [obj1, obj2, obj3];
 
 for (let x in arr){
-  console.log(`${arr[x]["name"]} --- ${arr[x]["title"]}`);
+  console.log(`${arr[x]['name']} --- ${arr[x]['title']}`);
 }

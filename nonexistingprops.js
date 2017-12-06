@@ -1,3 +1,5 @@
+
+'use strict';
 // Expand on the previous example by adding a boss property to
 //  everyone except the owner of the company.
 // Change the iteration to print out messages
@@ -8,23 +10,23 @@
 // display "${title} ${name} doesn't report to anybody." - for example, Founder John doesn't report to anybody.
 
 function gimmeObj (name, jobTitle, boss) {
-  if (typeof(boss) === "string") {
+  if (typeof(boss) === 'string') {
     return {
       name: `${name}`,
       title: `${jobTitle}`,
       boss: `${boss}`
-    }
+    };
   }
 
   return {
     name: `${name}`,
     title: `${jobTitle}`,
-  }
+  };
 }
 
-const obj1 = gimmeObj("Vernon", "Wizard", "God");
-const obj2 = gimmeObj("Alder", "King", "Lasagna Monster");
-const obj3 = gimmeObj("Trump", "President");
+const obj1 = gimmeObj('Vernon', 'Wizard', 'God');
+const obj2 = gimmeObj('Alder', 'King', 'Lasagna Monster');
+const obj3 = gimmeObj('Trump', 'President');
 
 const arr = [obj1, obj2, obj3];
 
