@@ -1,7 +1,7 @@
 const Database = {
   findOne: function (heroId){
     return this.store.heroes.find(function (hero) {
-      return hero.id === heroId;
+      return hero.id === heroId.id;
 
     });
   },
@@ -17,4 +17,4 @@ const Database = {
     ]
   }
 };
-console.log(Database.findOne(2));
+console.log(Database.findOne({id: 2}));
