@@ -6,11 +6,11 @@
 // Use console.log to show each property name and its associated value.
 
 const obj = {
-  "foo": 3,
-  "bar": 4,
-  "fum": 5,
-  "quux": 6,
-  "spam": 8,
+  'foo': 3,
+  'bar': 4,
+  'fum': 5,
+  'quux': 6,
+  'spam': 8,
 
 };
 
