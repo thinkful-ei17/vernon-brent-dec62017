@@ -6,14 +6,11 @@ CHECK.
 CHECK.
 
 CHECK.
-Using the .find() function, retrieve your character nicknamed aragorn
-from characters and then call his describe method.
+CHECK MOTHAFACKA.
 
-Using the .filter() function, create a new array from characters that
- ONLY contains characters of the race Hobbit.
+CHECK!!! Dx
 
-Using the .filter() function, create a new array from characters that
- ONLY contains characters with attack value above 5.
+BAM.
 
 What if you wanted to equip a weapon for each character and change how
 they are described? For example:
