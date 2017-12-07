@@ -23,10 +23,10 @@ const cipher = {
 
 // for -- looped over split strings: ter, foo, bar, rrr.
 
-    //for (x in cipher)
-        //--- x(key) === splitStrings[i][0]
-                //  if true -> do this -> splitStrings[i] = splitStrings[i][cipher.a-1];
-        // break
+//for (x in cipher)
+//--- x(key) === splitStrings[i][0]
+//  if true -> do this -> splitStrings[i] = splitStrings[i][cipher.a-1];
+// break
 function decode(input) {
   //Check for five letter words in string
   //Split string into array divided by a space
@@ -37,8 +37,8 @@ function decode(input) {
   for (let i = 0; i < splitStrings.length; i++){
     for (let x in cipher){ // a b c d --- alligator
       if (x === splitStrings[i][0]) {
-          found = true;
-          splitStrings[i] = splitStrings[i][cipher[x]-1];
+        found = true;
+        splitStrings[i] = splitStrings[i][cipher[x]-1];
       }
     }
     //check if the IF statement ran in our for loop
