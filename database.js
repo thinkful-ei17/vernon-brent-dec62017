@@ -1,3 +1,4 @@
+'use strict';
 const Database = {
   findOne: function (heroId){
     return this.store.heroes.find(function (hero) {
@@ -17,4 +18,4 @@ const Database = {
     ]
   }
 };
-console.log(Database.findOne({id: 2}));
+console.log(Database.findOne({id: 4}));

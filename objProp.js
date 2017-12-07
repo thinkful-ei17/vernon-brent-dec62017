@@ -10,7 +10,7 @@ const obj = {
   'bar': 4,
   'fum': 5,
   'quux': 6,
-  'spam': 8,
+  'spam': 8
 
 };
 
