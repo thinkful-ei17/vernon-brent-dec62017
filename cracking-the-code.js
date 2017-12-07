@@ -55,5 +55,40 @@ function decode(input) {
 
 }
 
+//second solution - using objects
+//Check for five letter words in string
+//Split string into array divided by a space
+//ex of words: bae, boo, hun, lol.
+//loop through words....
+    //if the firstlletter of the word we are on
+    //bae -> b matches a key in cipher aka it cypher[firstLetter] doesnt
+    //give us back the undefined object
+        //change string to one letter that corresponds to cipher
+    //else - when it doesnt exist aka undefined
+        //change string to space
+function dosdecode(input) {
+
+  const splitStrings = input.split(' ');
+  let firstLetter = "";
+  let decodedString = "";
+
+  for (let i = 0; i < splitStrings.length; i++){
+
+    firstLetter = cipher[splitStrings[i][0]];
+
+    if (cipher[firstLetter] !== undefined) {
+      splitStrings[i] = splitStrings[i][cipher[firstLetter]-1];
+    }
+
+    else {
+      splitStrings[i] = " ";
+    }
+  }
+
+  decodedString = splitStrings.join('');
+
+  return decodedString;
+}
 
 console.log(decode('craft block argon meter bells brown croon droop'));
+console.log(dosdecode('craft block argon meter bells brown croon droop'));
