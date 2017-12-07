@@ -73,7 +73,6 @@ function dosdecode(input) {
   let decodedString = "";
 
   for (let i = 0; i < splitStrings.length; i++){
-
     firstLetter = splitStrings[i][0];
 
     if (cipher[firstLetter] !== undefined) {
@@ -89,34 +88,37 @@ function dosdecode(input) {
 
   return decodedString;
 }
+//third solution using array functions like .map
+//all logic is the same but written in less line of code.
+//difference is array.map returns a new array....
+//so attaching .join() [ex: trumpsTweets.map().join()] turns that array into a string i can return
 
 function tresdecode(input) {
 
   const splitStrings = input.split(' ');
   let firstLetter = "";
-  let decodedString = "";
 
-  let decoded = splitStrings.map(function (n) {
-        firstLetter = cipher[splitStrings[i][0]];
+  return splitStrings.map(function (n) {
+
+        firstLetter = n[0];
+
+        return (cipher[firstLetter] !== undefined) ? n[cipher[firstLetter]-1] : " " ;
+
   }).join("");
 
-  for (let i = 0; i < splitStrings.length; i++){
-
-    firstLetter = splitStrings[i][0];
-
-    if (cipher[firstLetter] !== undefined) {
-      splitStrings[i] = splitStrings[i][cipher[firstLetter]-1];
-    }
-
-    else {
-      splitStrings[i] = " ";
-    }
-  }
-
-  decodedString = splitStrings.join('');
 
   return decodedString;
 }
+//should all print "for loop"
+console.time('Decode Timer');
 console.log(decode('craft block argon meter bells brown croon droop'));
+console.timeEnd('Decode Timer');
+
+console.time('Dos Decode Timer');
 console.log(dosdecode('craft block argon meter bells brown croon droop'));
-//console.log(tresdecode('craft block argon meter bells brown croon droop'));
+console.timeEnd('Dos Decode Timer');
+
+console.time('Tres Decode Timer');
+console.log(tresdecode('craft block argon meter bells brown croon droop'));
+console.timeEnd('Tres Decode Timer');
+//tad bit overkill. like 150% overkill x.x mentor advice. 
