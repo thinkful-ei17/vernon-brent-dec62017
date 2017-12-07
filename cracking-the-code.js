@@ -74,7 +74,7 @@ function dosdecode(input) {
 
   for (let i = 0; i < splitStrings.length; i++){
 
-    firstLetter = cipher[splitStrings[i][0]];
+    firstLetter = splitStrings[i][0];
 
     if (cipher[firstLetter] !== undefined) {
       splitStrings[i] = splitStrings[i][cipher[firstLetter]-1];
@@ -90,5 +90,33 @@ function dosdecode(input) {
   return decodedString;
 }
 
+function tresdecode(input) {
+
+  const splitStrings = input.split(' ');
+  let firstLetter = "";
+  let decodedString = "";
+
+  let decoded = splitStrings.map(function (n) {
+        firstLetter = cipher[splitStrings[i][0]];
+  }).join("");
+
+  for (let i = 0; i < splitStrings.length; i++){
+
+    firstLetter = splitStrings[i][0];
+
+    if (cipher[firstLetter] !== undefined) {
+      splitStrings[i] = splitStrings[i][cipher[firstLetter]-1];
+    }
+
+    else {
+      splitStrings[i] = " ";
+    }
+  }
+
+  decodedString = splitStrings.join('');
+
+  return decodedString;
+}
 console.log(decode('craft block argon meter bells brown croon droop'));
 console.log(dosdecode('craft block argon meter bells brown croon droop'));
+//console.log(tresdecode('craft block argon meter bells brown croon droop'));
